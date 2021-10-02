@@ -7,4 +7,4 @@ This project is licensed under the MIT license. See the LICENSE file for details
 
 ## Contributing
 
-See the CONTRIBUTING.md file for details.
+See the [CONTRIBUTING](CONTRIBUTING.md) for more details.
