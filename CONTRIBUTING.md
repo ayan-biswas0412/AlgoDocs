@@ -20,4 +20,4 @@ Just clone the repository and you are ready to go.
     # Sources (if any)
     # Conclusion (if any)
 
-
+See the example of [Selection sort](docs/sorting/selection_sort.md) before contributing.
