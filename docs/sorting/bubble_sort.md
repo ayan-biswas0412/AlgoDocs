@@ -1,4 +1,4 @@
-# Selection Sort
+# Bubble Sort
 
 Bubble sort is based on that if you compare every pair posible in an array you can find the position of each in one in increasing or decreasing order.
 
@@ -9,7 +9,6 @@ Step 1 − Compare forst pair of array
 Step 2 − If the first one is bigger than the second one, swap their values
 Step 3 − Go to next pair
 Step 4 − Repeat until list is sorted
-
 ```
 
 ## Pseudocode
@@ -33,7 +32,6 @@ procedure bubble sort
     end for
 
 end procedure
-
 ```
 
 ## Code
