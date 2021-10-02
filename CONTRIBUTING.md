@@ -1,4 +1,4 @@
-# Setup Instructions
+# Contributing Instructions
 
 Just clone the repository and you are ready to go.
 
