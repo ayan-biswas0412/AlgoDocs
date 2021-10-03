@@ -14,7 +14,7 @@ Step 3: If the key element is smaller than its predecessor, compare it to the el
 
 ```
 procedure insertion sort 
-   list  : array of items
+   A  : array of items
    n     : size of list
 
   INSERTION-SORT(A)
