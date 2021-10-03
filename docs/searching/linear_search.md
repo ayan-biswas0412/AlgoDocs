@@ -27,6 +27,20 @@ end procedure
 
 ## Code
 
+### C++ Implementation
+
+```cpp  
+// Linearly search x in arr[].  If x is present then return its location,  otherwise return -1
+int search(int arr[], int size, int x)
+{
+    int i;
+    for (i = 0; i < size; i++)
+        if (arr[i] == x)
+            return i;
+    return -1;
+}
+```
+
 ### Python Implementation
 
 ```python
@@ -47,3 +61,4 @@ The algorithm runs in constant space O(1).
 ## Sources
     
 - [Linear Search](https://en.wikipedia.org/wiki/Linear_search)
+- [Linear Search - GeeksforGeeks](https://www.geeksforgeeks.org/linear-search/)
