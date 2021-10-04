@@ -78,7 +78,6 @@ TREE * binarysearch(TREE * root,int data)
     printf("Root inserted successfully\n");
     return root;
 }
-
 ```
 
 
