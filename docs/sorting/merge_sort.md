@@ -53,7 +53,7 @@ void mergeSort(int arr[], int l, int r)
 
 
 ```
-
+### JavaScript Implementation
 ```javascript
 function mergeSort(arr, l, r) {
   if (l >= r) {
