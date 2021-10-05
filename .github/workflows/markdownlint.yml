@@ -2,10 +2,10 @@ name: Markdownlint CI
 
 on:
   push:
-    branches-ignore:
+    branches:
       - main
   pull_request:
-    branches-ignore:
+    branches:
       - main
 jobs:
   lint-changelog:
