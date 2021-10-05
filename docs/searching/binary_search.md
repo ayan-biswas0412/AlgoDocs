@@ -38,6 +38,35 @@ end procedure
 
 ## Code
 
+### C++ Implementation
+
+```C++
+int binarySearch(int arr[], int l, int r, int x)
+{
+    if (r >= l) {
+        int mid = l + (r - l) / 2;
+  
+        // If the element is present at the middle
+        // itself
+        if (arr[mid] == x)
+            return mid;
+  
+        // If element is smaller than mid, then
+        // it can only be present in left subarray
+        if (arr[mid] > x)
+            return binarySearch(arr, l, mid - 1, x);
+  
+        // Else the element can only be present
+        // in right subarray
+        return binarySearch(arr, mid + 1, r, x);
+    }
+  
+    // We reach here when element is not
+    // present in array
+    return -1;
+}
+```
+
 ### Python Implementation
 
 ```python
@@ -52,7 +81,30 @@ def binary_search(array, low, high, target):
         else:
             return binary_search(array, mid + 1, high, target)
 ```
+### Golang Implementation
+```golang
+func binarySearch(needle int, haystack []int) bool {
 
+	low := 0
+	high := len(haystack) - 1
+
+	for low <= high{
+		median := (low + high) / 2
+
+		if haystack[median] < needle {
+			low = median + 1
+		}else{
+			high = median - 1
+		}
+	}
+
+	if low == len(haystack) || haystack[low] != needle {
+		return false
+	}
+
+	return true
+}
+```
 ## Time Complexity
 
 The time complexity of the above algorithm is O(logN).
@@ -64,3 +116,4 @@ The algorithm runs in constant space O(1).
 ## Sources
     
 - [Binary Search - Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+- [Binary Search - geekforgeeks](https://www.geeksforgeeks.org/binary-search/)
