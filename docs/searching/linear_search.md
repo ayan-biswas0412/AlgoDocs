@@ -74,6 +74,21 @@ def linear_search(array, target):
     }
 ```
 
+## Javascript Implementation
+
+```javascript
+ function linear_search(array, key) {
+  for (let i = 0; i < arr.length; i++) {
+    if (array[i] === key) 
+    {
+      return i;
+    }
+  }
+  return -1;
+}
+```
+
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n).
