@@ -58,30 +58,6 @@ void insertionSort(int arr[], int n)
 }
 ```
 
-### Javascript implementation
-
-```javascript
-
-function insertionSort(arr, n){
-    let i, key, j; 
-    for (i = 1; i < n; i++)
-    { 
-        key = arr[i]; 
-        j = i - 1; 
-   
-        // Move elements of the array, that are 
-       // greater than key, to one position ahead 
-        //of their current position //
-        while (j >= 0 && arr[j] > key)
-        { 
-            arr[j + 1] = arr[j]; 
-            j = j - 1; 
-        } 
-        arr[j + 1] = key; 
-    } 
-} 
-```
-
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n^2).
