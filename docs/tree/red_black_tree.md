@@ -14,7 +14,7 @@ A red-black tree is a binary search tree that satisfies the following RED-BLACK 
 ```
 ROTATIONS:  Changes the pointer structure through rotation, which is a local operation in a search tree that preserves the BINARY-SEARCH-TREE PROPERTY.
 
-INSERTION:  Insert a new node at leaf position and color it as RED and then call the subroutine RB-INSERT-FIXUP to make arrangemnets to maintain the RED-BLACK PROPERTIES.
+INSERTION:  Insert a new node at leaf position and color it as RED and then call the subroutine RB-INSERT-FIXUP to make arrangements to maintain the RED-BLACK PROPERTIES.
 
 TRANSPLANT: It replaces the subtree rooted at a node with the subtree rooted at some other node.
 
@@ -27,14 +27,14 @@ DELETION:   Find the node, find its child nodes and delete the specific node, th
 ```
 Red-Black tree
     Node attributes
-        Node   : x is an arbitary node in the red-black tree
+        Node   : x is an arbitrary node in the red-black tree
         x.key  : The data value stored in the node x
         x.color: The boolean attribute which stores the color of x
         x.p    : The pointer which point to the parent node of x
         x.left : The pointer which point to the left child node of x
         x.right: The pointer which point to the right child node of x
     Tree attributes:
-        T      : T is a arbitary red-black tree
+        T      : T is a arbitrary red-black tree
         T.root : The root of the red-black tree T, which have always Black color
         T.nil  : It is a special node which have no parent and no data stored in it and always have Black color
 
