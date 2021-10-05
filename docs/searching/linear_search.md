@@ -27,6 +27,19 @@ end procedure
 
 ## Code
 
+### C Implementation
+
+```C
+int search(int array[], int n, int x) {
+  
+  // Going through array sequencially
+  for (int i = 0; i < n; i++)
+    if (array[i] == x)
+      return i;
+  return -1;
+}
+```
+
 ### C++ Implementation
 
 ```cpp  
@@ -48,6 +61,31 @@ def linear_search(array, target):
     for index, element in enumerate(array):
         if element == target:
             return index 
+```
+
+## Java Implementation
+
+```java
+    public int linear_search(int array[], int size, int key){
+        for(int i=0; i<size; i++)
+            if(array[i]==key)
+                return i;
+        return -1;
+    }
+```
+
+## Javascript Implementation
+
+```javascript
+ function linear_search(array, key) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === key) 
+    {
+      return i;
+    }
+  }
+  return -1;
+}
 ```
 
 ## Time Complexity
