@@ -65,6 +65,17 @@ function mergeSort(arr, l, r) {
   merge(arr, l, m, r);
 }
 ```
+### Java implementation
+
+```java
+void mergeSort(int arr[], int l, int r){
+  if(r > l){
+    int m = l + (r - l)/2;
+    mergeSprt(arr, l, m);
+    mergeSort(arr, m+1, r);
+    mergeSort(arr, l, m, r);
+  }
+}
 
 ## Time Complexity
 
