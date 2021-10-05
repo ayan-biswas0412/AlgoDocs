@@ -37,9 +37,8 @@ Red-Black tree
         T      : T is a arbitary red-black tree
         T.root : The root of the red-black tree T, which have always Black color
         T.nil  : It is a special node which have no parent and no data stored in it and always have Black color
-```
-#### TREE-SEARCH
-```
+
+
     TREE-SEARCH(x,k)
         if x==T.nil or k==x.key
             return x
@@ -47,16 +46,14 @@ Red-Black tree
             return TREE-SEARCH(x.left,k)
         else
             return TREE-SEARCH(x.right,k)
-```
-#### TREE-MINIMUM
-```
+
+
     TREE-MINIMUM(T,x)
         while(x.left!=T.nil)
             x=x.left
         return x
-```
-#### ROTATIONS
-```
+
+
     LEFT-ROTATE(T,x)
         y=x.right
         x.right=y.left
@@ -86,9 +83,8 @@ Red-Black tree
             x.p.right=y
         y.right=x
         x.p=y
-```
-#### INSERT FIXUP
-```
+
+
     RB-INSERT-FIXUP(T,z)
         while z.p.color==RED
             if z.p==z.p.p.left
@@ -120,9 +116,8 @@ Red-Black tree
                 z.p.p.color=RED
                 LEFT-ROTATE(T,z.p.p)
         T.root.color=BLACK
-```
-#### TRANSPLANT
-```
+
+
     RB-TRANSPLANT(T,u,v)
         if u.p==T.nil
             T.root=v
@@ -131,9 +126,8 @@ Red-Black tree
         else
             u.p.right=v
         v.p=u.p
-```
-#### DELETE FIXUP
-```
+
+
     RB-DELETE-FIXUP(T,x)
         while x!=T.root and x.color==BLACK
             if x==x.p.left
@@ -179,9 +173,8 @@ Red-Black tree
                     RIGHT-ROTATE(T,x.p)
                     x=T.root
         x.color=BLACK
-```
-#### INSERTION
-```
+
+
     RB-INSERT(T,z)
         y=T.nil
         x.T.root
@@ -202,10 +195,8 @@ Red-Black tree
         z.right=T.nil
         z.color=RED
         RB-INSERT-FIXUP(T,z)
-```
 
-#### DELETION
-```
+
     RB-DELETE(T,z)
         y=z
         y-original-color=y.color
@@ -231,6 +222,7 @@ Red-Black tree
             y.color=z.color
         if y-original-color==BLACK
             RB-DELETE-FIXUP(T,x)
+
 ```
 ## Code
 
