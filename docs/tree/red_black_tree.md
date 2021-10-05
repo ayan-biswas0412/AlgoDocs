@@ -1,5 +1,5 @@
 # Red-Black tree
-```
+
 A red-black tree is a binary search tree with one extra bit of storage per node: its color, which can be either RED or BLACK. By constructing the node colors on any simple
 path from the root to a leaf, red-black tree ensures that no such path is more than twice as long as any other, so that red-black tree is approximately balanced.
 A red-black tree is a binary search tree that satisfies the following RED-BLACK PROPERTIES:
@@ -8,7 +8,7 @@ A red-black tree is a binary search tree that satisfies the following RED-BLACK 
     3. Every leaf node(nil) is black.
     4. If a node is red, then both its children are black.
     5. For each node, all simple paths from the node to descendant leaves contain the same number of black nodes.
-```
+
 ## Algorithm
 
 ```
