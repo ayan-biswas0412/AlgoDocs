@@ -80,6 +80,7 @@ function insertionSort(arr, n){
         arr[j + 1] = key; 
     } 
 } 
+```
 
 ## Time Complexity
 

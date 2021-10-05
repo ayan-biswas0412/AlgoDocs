@@ -76,6 +76,7 @@ void mergeSort(int arr[], int l, int r){
     mergeSort(arr, l, m, r);
   }
 }
+```
 
 ## Time Complexity
 
