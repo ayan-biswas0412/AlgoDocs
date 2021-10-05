@@ -107,7 +107,8 @@ func binarySearch(needle int, haystack []int) bool {
 ```
 
 ## Java Implementation
-```binarySearch(int arr[], int low, int high,int data){
+```java
+binarySearch(int arr[], int low, int high,int data){
 	while(l<=h) {
 			int m = (l+h)/2;
 			if(data>arr[m]) {
@@ -120,6 +121,27 @@ func binarySearch(needle int, haystack []int) bool {
 			}
 		}
 		System.out.println(-1); //not found
+}
+```
+
+## JavaScript Implementation
+```javascript
+function binarySearch(Arr, key){
+    let start = 0;
+    let end = Arr.length - 1;
+    while (start <= end) {
+        let mid = Math.floor((start + end) / 2);
+        if (Arr[mid] === key) {
+            return mid;
+        } 
+        else if (Arr[mid] < key) {
+            start = mid + 1;
+        }
+         else {
+            end = mid - 1;
+        }
+    }
+    return -1;
 }
 ```
 
