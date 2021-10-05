@@ -1,5 +1,6 @@
 # AlgoDocs 
 ![license-mit](https://img.shields.io/github/license/ayan-biswas0412/AlgoDocs)
+[![CodeFactor](https://www.codefactor.io/repository/github/ayan-biswas0412/algodocs/badge)](https://www.codefactor.io/repository/github/ayan-biswas0412/algodocs)
 
 This repository is meant for jotting down common algorithms and their implementation in several languages.
 It helps students to go through a quick guide and have preparation on time at a glance.
