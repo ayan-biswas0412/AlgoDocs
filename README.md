@@ -3,7 +3,7 @@ This repository is meant for jotting down common algorithms and their implementa
 
 ## License
 
-This project is licensed under the MIT license. See the LICENSE file for details.
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
