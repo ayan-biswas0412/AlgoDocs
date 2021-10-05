@@ -2,10 +2,7 @@ name: Typo CI
 
 on:
   push:
-    branches-ignore:
-      - main
-  pull_request:
-    branches-ignore:
+    branches:
       - main
 jobs:
   spellcheck:
