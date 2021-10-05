@@ -105,6 +105,24 @@ func binarySearch(needle int, haystack []int) bool {
 	return true
 }
 ```
+
+## Java Implementation
+```binarySearch(int arr[], int low, int high,int data){
+	while(l<=h) {
+			int m = (l+h)/2;
+			if(data>arr[m]) {
+				l=m+1;
+			} else if(data<arr[m]) {
+				h=m-1;
+			} else {
+				System.out.println(m);
+				return;
+			}
+		}
+		System.out.println(-1); //not found
+}
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(logN).

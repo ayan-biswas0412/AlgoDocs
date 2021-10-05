@@ -88,7 +88,6 @@ def linear_search(array, target):
 }
 ```
 
-
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n).
