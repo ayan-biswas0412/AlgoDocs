@@ -78,7 +78,7 @@ def linear_search(array, target):
 
 ```javascript
  function linear_search(array, key) {
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] === key) 
     {
       return i;
