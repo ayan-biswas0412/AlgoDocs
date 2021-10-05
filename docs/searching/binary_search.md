@@ -123,6 +123,27 @@ func binarySearch(needle int, haystack []int) bool {
 }
 ```
 
+## JavaScript Implementation
+```javascript
+function binarySearch(Arr, key){
+    let start = 0;
+    let end = Arr.length - 1;
+    while (start <= end) {
+        let mid = Math.floor((start + end) / 2);
+        if (Arr[mid] === key) {
+            return mid;
+        } 
+        else if (Arr[mid] < key) {
+            start = mid + 1;
+        }
+         else {
+            end = mid - 1;
+        }
+    }
+    return -1;
+}
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(logN).
