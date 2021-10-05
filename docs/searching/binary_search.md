@@ -107,7 +107,8 @@ func binarySearch(needle int, haystack []int) bool {
 ```
 
 ## Java Implementation
-```binarySearch(int arr[], int low, int high,int data){
+```java
+binarySearch(int arr[], int low, int high,int data){
 	while(l<=h) {
 			int m = (l+h)/2;
 			if(data>arr[m]) {
