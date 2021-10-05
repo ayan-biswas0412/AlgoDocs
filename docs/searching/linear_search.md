@@ -63,6 +63,17 @@ def linear_search(array, target):
             return index 
 ```
 
+## Java Implementation
+
+```java
+    public int linear_search(int array[], int size, int key){
+        for(int i=0; i<size; i++)
+            if(array[i]==key)
+                return i;
+        return -1;
+    }
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n).
