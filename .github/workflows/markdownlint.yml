@@ -15,7 +15,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: Lint changelog file
-      uses: avtodev/markdown-lint@v1
+      uses: docker://avtodev/markdown-lint:v1 
       with:
         rules: '/lint/rules/changelog.js'
         config: '/lint/config/changelog.yml'
