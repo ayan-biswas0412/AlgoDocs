@@ -73,6 +73,49 @@ def bubble_sort(array):
     return array
 ```
 
+### Go Implementation
+
+```go
+func bubbleSort(array []int) []int {
+	for i := 0; i < len(array) - 1; i++ {
+		for j := 0; j < len(array) - 1 - i; j++ {
+			array[i], array[i+1] = array[i+1], array[i]
+		}
+	}
+	return array
+}
+```
+
+### Java Implementation
+
+```java
+public static int[] bubleSort(int array[]) {
+	for(int i = 0; i < array.length; i++) {
+		 for(int j = 0; j < array.length - 1 - i; j++) {
+			 int temp = array[j];
+			 array[j] = array[j+1];
+			 array[j+1] = array[j];
+		 }
+	}
+	return array;
+}
+```
+
+### Javascript Implementation
+
+```js
+let bubbleSort = (array) => {
+	for(int i = 0; i < array.length(); i++) {
+		for(int j = 0; j < array.length - 1 - i; j++) {
+			let temp = array[j];
+			array[j] = array[j+1];
+			array[j+1] = array[j];
+		}
+	}
+	return array;
+}
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n^2).
