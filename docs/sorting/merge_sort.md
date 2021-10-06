@@ -28,6 +28,30 @@ procedure mergesort( var a as array )
    return merge( l1, l2 )
 end procedure
 
+procedure merge( var a as array, var b as array )
+   var c as array
+   while ( a and b have elements )
+      if ( a[0] > b[0] )
+         add b[0] to the end of c
+         remove b[0] from b
+      else
+         add a[0] to the end of c
+         remove a[0] from a
+      end if
+   end while
+   
+   while ( a has elements )
+      add a[0] to the end of c
+      remove a[0] from a
+   end while
+   
+   while ( b has elements )
+      add b[0] to the end of c
+      remove b[0] from b
+   end while
+   
+   return c	
+end procedure
 ```
 
 ## Code
@@ -77,6 +101,33 @@ void mergeSort(int arr[], int l, int r){
   }
 }
 ```
+### Python implementation
+```python 
+def merge(arr1, arr2):
+    arr3 = []
+    while(len(arr1)>0 and len(arr2)>0):
+        if(arr1[0]<arr2[0]):
+            arr3.append(arr1[0])
+            arr1.remove(arr1[0])
+        else:
+            arr3.append(arr2[0])
+            arr2.remove(arr2[0])
+    if(len(arr1)>0):
+        arr3 = arr3 + arr1
+    if(len(arr2)>0):
+        arr3 = arr3 + arr2 
+    return arr3   
+
+def mergeSort(arr):
+    if (len(arr) == 1):
+        return arr
+    else: 
+        m = int(len(arr)/2)
+        arr1 = mergeSort(arr[0:m])
+        arr2 = mergeSort(arr[m:])
+        return merge(arr1, arr2)
+```
+
 
 ## Time Complexity
 
