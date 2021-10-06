@@ -1,4 +1,3 @@
-# Add to: .github/workflows/spellcheck.yml
 name: Typo CI
 
 on:
