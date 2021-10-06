@@ -65,6 +65,55 @@ void selectionSort(int arr[], int n)
 }
 ```
 
+### C Implementation
+
+```C
+void selectionSort(int arr[], int n)
+{
+    int i, j, min, temp;
+ 
+    // One by one move boundary of unsorted subarray
+    for (i = 0; i < n-1; i++)
+    {
+        // Find the minimum element in unsorted array
+        min = i;
+        for (j = i+1; j < n; j++)
+          if (arr[j] < arr[min])
+            min = j;
+ 
+        // Swap the found minimum element with the first element
+        temp = arr[min];
+        arr[min] = arr[i];
+        arr[i] = temp;
+    }
+}
+```
+
+### Java Implementation
+
+```Java
+void selectionSort(int arr[])
+{
+    int i, j, min_index, temp, n;
+    n = arr.length;
+ 
+    // One by one move boundary of unsorted subarray
+    for (i = 0; i < n-1; i++)
+    {
+        // Find the minimum element in unsorted array
+        min_index = i;
+        for (j = i+1; j < n; j++)
+          if (arr[j] < arr[min_index])
+            min_index = j;
+ 
+        // Swap the found minimum element with the first element
+        temp = arr[min_index];
+        arr[min_index] = arr[i];
+        arr[i] = temp;
+    }
+}
+```
+
 ### Python Implementation
 
 ```python
