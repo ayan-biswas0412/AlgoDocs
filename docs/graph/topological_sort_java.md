@@ -1,4 +1,23 @@
-package org.arpit.java2blog;
+# Topological Sorting
+# Topological Sorting is ordering of vertices or nodes such if there is an edge between (u,v) then u should come before v in topological sorting. Topological sort is possible only for Directed Acyclic Graph(DAG). If there is a cycle in graph, then there won’t be any possibility for Topological Sort.
+# Please note that there can be more than one solution for topological sort.
+
+Let’s pick up node 30 here.
+
+Node 30 depends on node 20 and node 10.
+Node 10 depends on node 20 and node 40.
+Node 20 depends on node 40.
+
+Hence node 10, node 20 and node 40 should come before node 30 in topological sorting.
+
+This algorithm is a variant of Depth-first search. In depth first search, we first print the vertex and then go to its neighbours but  in case of topological sort, we don’t print vertex immediately instead we push it to the Stack.
+
+In topological sorting, we will have a temporary stack. We are not going to print the vertex immediately, we first recursively call topological sorting for all its neighbour vertices, then push it to a stack. We will print stack once we are done with recursive topolgical sorting.
+
+
+# Code
+    ## JAVA implementation
+    package org.arpit.java2blog;
  
 import java.util.ArrayList;
 import java.util.List;
@@ -88,3 +107,12 @@ public class TopologicalSort
  
 }
  
+
+   
+    ...
+# Sources https://java2blog.com/topological-sort-java/#Topological_Sort_Algorithm
+# Conclusion (if any)
+
+
+
+
