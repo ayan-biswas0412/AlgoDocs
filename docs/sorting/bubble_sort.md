@@ -61,7 +61,50 @@ void bubbleSort(int arr[], int n)
    }
 }
 ```
+### C Implementation
+
+```C
+void bubbleSort(int arr[], int n)
+{
+   int i, j, temp;
+   for (i = 0; i < n-1; i++)     
+       // Last i elements are already in place  
+       for (j = 0; j < n-i-1; j++)
+           if (arr[j] > arr[j+1])
+	   {
+	      temp = arr[j];
+	      arr[j] = arr[j+1];
+	      arr[j+1]=temp;
+	   }
+}
+```
+### Java Implementation
+
+```java
+void bubbleSort(int arr[], int n)
+    {
+        int i, j, temp;
+        boolean swapped;
+        for (i = 0; i < n - 1; i++)
+        {
+            swapped = false;
+            for (j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
  
+            if (swapped == false)
+                break;
+        }
+    }
+```    
+
 ### Python Implementation
 
 ```python
@@ -71,6 +114,33 @@ def bubble_sort(array):
             if array[inner] > array[inner + 1]:
                 array[inner], array[inner + 1] = array[inner + 1], array[inner]
     return array
+```
+
+### Go Implementation
+
+```go
+func bubbleSort(array []int) []int {
+	for i := 0; i < len(array) - 1; i++ {
+		for j := 0; j < len(array) - 1 - i; j++ {
+			array[i], array[i+1] = array[i+1], array[i]
+		}
+	}
+	return array
+}
+```
+### Javascript Implementation
+
+```js
+let bubbleSort = (array) => {
+	for(int i = 0; i < array.length(); i++) {
+		for(int j = 0; j < array.length - 1 - i; j++) {
+			let temp = array[j];
+			array[j] = array[j+1];
+			array[j+1] = array[j];
+		}
+	}
+	return array;
+}
 ```
 
 ## Time Complexity
