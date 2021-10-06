@@ -100,7 +100,7 @@ graph.topological_sort()
 
 
 ```
-### Python Implementation
+### Java Implementation
 
 ```java
 
