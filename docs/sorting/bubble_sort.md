@@ -61,9 +61,9 @@ void bubbleSort(int arr[], int n)
    }
 }
 ```
-### JAVA Implementation
+### Java Implementation
 
-```JAVA
+```java
 void bubbleSort(int arr[], int n)
     {
         int i, j, temp;
