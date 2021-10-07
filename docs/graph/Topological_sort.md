@@ -100,8 +100,79 @@ graph.topological_sort()
 
 
 ```
+### Java Implementation
 
+```java
 
+public class TopologicalSort {
+
+    static Set<Integer> recStac;
+    static Set<Integer> visited;
+    static Stack<Integer> res;
+    static ArrayList[] adj;
+    public static int[] solve(int A, int[][] B) {
+        recStac = new HashSet();
+        visited = new HashSet();
+        res = new Stack();
+        adj = new ArrayList[A+1];
+        
+        for(int i=0; i<= A; i++){
+            adj[i] = new ArrayList();
+        }
+        
+        for(int i=0; i<B.length; i++){
+            adj[B[i][0]].add(B[i][1]);
+        }
+        boolean ans = false;
+        for(int i=1; i<=A;i++){
+            // if(adj[i].size() <= 0) continue;
+            if(visited.contains(i)) continue;
+            ans = dfs(i);
+            if(ans == true){
+                return new int[0];
+            }
+        }
+        
+        int[] result = new int[A];
+        int i=A-1;
+        while(!res.isEmpty()){
+            result[i--] = res.pop();
+        }
+        return result;
+    }
+    
+    public static boolean dfs(int cur){
+        if(recStac.contains(cur)){
+            return true;
+        }
+        if(visited.contains(cur)){
+            return false;
+        }
+        
+        visited.add(cur);
+        recStac.add(cur);
+        PriorityQueue<Integer> minheap = new PriorityQueue();
+        minheap.addAll(adj[cur]);
+        while(!minheap.isEmpty()){
+            int next = (int)minheap.poll();
+            if(dfs(next)){
+                return true;
+            }
+        }
+        res.push(cur);
+        recStac.remove(cur);
+        return false;
+    }
+    
+    public static void main(String[] args){
+      int no_of_nodes = 6;
+      int[][] directed_edges = { {6, 3}, {6, 1}, {5, 1}, {5, 2}, {3, 4}, {4, 2} };
+      System.out.printf(Arrays.toString(solve(no_of_nodes, directed_edges)));
+    }
+    
+}
+
+```
 
 ## Time Complexity
 
