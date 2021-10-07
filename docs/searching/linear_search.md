@@ -87,7 +87,18 @@ def linear_search(array, target):
   return -1;
 }
 ```
+## Golang Implementation
 
+```golang
+ func linearsearch(datalist []int, key int) bool {
+	for _, item := range datalist {
+		if item == key {
+			return true
+		}
+	}
+	return false
+} 
+```
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n).
