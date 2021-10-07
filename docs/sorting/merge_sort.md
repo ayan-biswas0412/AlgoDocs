@@ -199,7 +199,27 @@ def mergeSort(arr):
         arr2 = mergeSort(arr[m:])
         return merge(arr1, arr2)
 ```
+### OCaml implementation
+```ocaml
+let rec merge arr1 arr2 = 
+  match (arr1, arr2) with
+  | (a1::arr1A, a2::arr2A) -> 
+      if a1 < a2 
+      then a1::(merge arr1A arr2) 
+      else a2::(merge arr1 arr2A) 
+  | (arr1A, []) -> arr1A                                                            
+  | ([], arr2A) -> arr2A 
+;;
 
+
+let rec mergeSort arr = 
+  let m = (List.length arr) in 
+  if m == 1 
+  then arr
+  else let (arr1, arr2) = listSplit arr (m/2)
+    in merge (mergeSort arr1) (mergeSort arr2)
+;;
+```
 
 ## Time Complexity
 
