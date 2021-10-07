@@ -36,7 +36,6 @@ procedure insertion sort
 
 ```cpp
 
-
 void insertionSort(int arr[], int n)
 {
     int i, key, j;
@@ -57,6 +56,49 @@ void insertionSort(int arr[], int n)
     }
 }
 ```
+
+### C Implementation
+
+```c
+
+void insertionSort(int arr[], int n)
+{
+    int i, key, j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+ 
+        /* Move elements of arr[0..i-1], that are
+          greater than key, to one position ahead
+          of their current position */
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+```
+
+### Python Implementation
+
+```python
+def insertion_sort(array):  
+  
+        for i in range(1, len(array)):  
+            key = array[i]  
+  
+            # Move elements of array[0..i-1], that are  
+            # greater than key, to one position ahead  
+            # of their current position  
+            j = i - 1  
+            while j >= 0 and key < array[j]:  
+                array[j + 1] = array[j]  
+                j -= 1  
+            array[j + 1] = key  
+        return array
+```
+
 ### Javascript Implementation
 
 ```javascript
