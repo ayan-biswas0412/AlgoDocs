@@ -167,7 +167,7 @@ public class TopologicalSort {
     public static void main(String[] args){
       int no_of_nodes = 6;
       int[][] directed_edges = { {6, 3}, {6, 1}, {5, 1}, {5, 2}, {3, 4}, {4, 2} };
-      solve(no_of_nodes, directed_edges);
+      System.out.printf(Arrays.toString(solve(no_of_nodes, directed_edges)));
     }
     
 }
