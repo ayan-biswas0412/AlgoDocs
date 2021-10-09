@@ -9,4 +9,5 @@ Various sorting algorithms are implemented in this folder.
 3. [Merge sort](./merge_sort.md)
 4. [Quick sort](./quick_sort.md)
 5. [Selection sort](./selection_sort.md)
+6. [Competitive programming Tips](./cp_tips.md)
 
