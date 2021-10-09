@@ -145,6 +145,25 @@ function binarySearch(Arr, key){
 }
 ```
 
+## Swift Implementation
+```swift
+func binarySearch(array: [Int], lhs: Int, rhs: Int, target: Int) -> Int? {
+    if rhs >= lhs {
+        let mid = Int((rhs + lhs) / 2)
+
+        if array[mid] == target {
+            return mid
+        } else if array[mid] > target {
+            return binarySearch(array: array, lhs: lhs, rhs: mid - 1, target: target)
+        } else{
+            return binarySearch(array: array, lhs: mid + 1, rhs: rhs, target: target)
+        }
+    } else {
+        return nil
+    }
+}
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(logN).
