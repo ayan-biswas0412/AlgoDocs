@@ -145,6 +145,26 @@ function binarySearch(Arr, key){
 }
 ```
 
+### C Implementation
+```c
+int binarySearch(int arr[], int left, int right, int search)
+{
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+  
+        if (arr[mid] == search)
+            return mid;
+  
+        if (arr[mid] < search)
+            left = mid + 1;
+  
+        else
+            right = mid - 1;
+    }
+    return -1;
+}
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(logN).
