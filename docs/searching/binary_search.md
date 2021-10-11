@@ -40,43 +40,42 @@ end procedure
 
 ### C Implementation
 ```C
-TREE * binarysearch(TREE * root,int data)
+#include <stdio.h>
+int main()
 {
-    TREE *newnode;
-    newnode=(TREE *)malloc(sizeof(TREE));
-    if(newnode==NULL)
-    {
-        printf("Memory allocation failed\n");
-        return root;
-    }
-  
-    newnode->data=data;
-    newnode->left=NULL;
-    newnode->right=NULL;
+  int c, first, last, middle, n, search, array[100];
 
-    if(root==NULL)
-    {
-        printf("Root inserted successfully\n");
-        return newnode;
-    }
+  printf("Enter number of elements\n");
+  scanf("%d", &n);
 
-    TREE *curr,*parent;
-    curr=root;
-    parent=NULL;
-    while(curr!=NULL)
-    {
-        parent=curr;
-        if(newnode->data<curr->data)
-            curr=curr->left;
-        else
-            curr=curr->right;
+  printf("Enter %d integers\n", n);
+
+  for (c = 0; c < n; c++)
+    scanf("%d", &array[c]);
+
+  printf("Enter value to find\n");
+  scanf("%d", &search);
+
+  first = 0;
+  last = n - 1;
+  middle = (first+last)/2;
+
+  while (first <= last) {
+    if (array[middle] < search)
+      first = middle + 1;
+    else if (array[middle] == search) {
+      printf("%d found at location %d.\n", search, middle+1);
+      break;
     }
-    if(newnode->data<parent->data)
-        parent->left=newnode;
     else
-        parent->right=newnode;
-    printf("Root inserted successfully\n");
-    return root;
+      last = middle - 1;
+
+    middle = (first + last)/2;
+  }
+  if (first > last)
+    printf("Not found! %d isn't present in the list.\n", search);
+
+  return 0;
 }
 ```
 
