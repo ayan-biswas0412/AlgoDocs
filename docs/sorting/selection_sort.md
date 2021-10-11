@@ -175,6 +175,29 @@ func Selection_Sort(array[] int, size int) []int {
    return array
 }
 ```
+### Swift Implementation
+
+```swift
+func selectionSort(array: inout [Int]) {
+    
+    for currentIndex in array.indices {
+        var minIndex = currentIndex
+        
+        for index in (currentIndex + 1)..<array.count {
+            if(array[index] < array[minIndex]) {
+                minIndex = index
+            }
+        }
+        
+        if (minIndex != currentIndex) {
+            let temp = array[currentIndex]
+            array[currentIndex] = array[minIndex]
+            array[minIndex] = temp
+        }
+        
+    }
+}
+```
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n^2).
