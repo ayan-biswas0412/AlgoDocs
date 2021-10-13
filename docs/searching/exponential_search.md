@@ -55,8 +55,9 @@ int exponentialSearch(int A[], int start, int end, int key){
 }
 ```
 
-### JAVA implementation
-```
+### Java implementation
+
+```java
     static int expSearch(int array[], int n, int searchValue) {
       //if value is at position one
       if(array[0] == searchValue) {
@@ -82,6 +83,6 @@ The algorithm runs in constant space O(1).
 
 ## Sources
 
-- [Exponential Search - GeeksforGeeks] (https://www.geeksforgeeks.org/exponential-search/)
-- [Exponential Search - Tutorialspoint] (https://www.tutorialspoint.com/Exponential-Search)
-- [Exponential Search - Wikipedia] (https://en.wikipedia.org/wiki/Exponential_search)
+- [Exponential Search - GeeksforGeeks](https://www.geeksforgeeks.org/exponential-search/)
+- [Exponential Search - Tutorialspoint](https://www.tutorialspoint.com/Exponential-Search)
+- [Exponential Search - Wikipedia](https://en.wikipedia.org/wiki/Exponential_search)
