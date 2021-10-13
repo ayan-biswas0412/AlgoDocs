@@ -54,6 +54,25 @@ int exponentialSearch(int A[], int start, int end, int key){
    return binarySearch(A, i/2, i, key); //search key within the range
 }
 ```
+
+### Java implementation
+
+```java
+    static int expSearch(int array[], int n, int searchValue) {
+      //if value is at position one
+      if(array[0] == searchValue) {
+       return 0;
+      }
+      //find the range for the binary search
+      int i = 1;
+      while (i < n && array[i] <= searchValue) {
+       i = i * 2;
+      }
+      //now call the binary search
+      return Arrays.binarySearch(array, (i / 2), Math.min(i, n), searchValue);
+    }
+```
+
 ## Time Complexity
 
 The time complexity of Exponential Search is O(log n), where n is the size of the given array.
@@ -64,6 +83,6 @@ The algorithm runs in constant space O(1).
 
 ## Sources
 
-- [Exponential Search - GeeksforGeeks] (https://www.geeksforgeeks.org/exponential-search/)
-- [Exponential Search - Tutorialspoint] (https://www.tutorialspoint.com/Exponential-Search)
-- [Exponential Search - Wikipedia] (https://en.wikipedia.org/wiki/Exponential_search)
+- [Exponential Search - GeeksforGeeks](https://www.geeksforgeeks.org/exponential-search/)
+- [Exponential Search - Tutorialspoint](https://www.tutorialspoint.com/Exponential-Search)
+- [Exponential Search - Wikipedia](https://en.wikipedia.org/wiki/Exponential_search)
