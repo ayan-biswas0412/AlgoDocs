@@ -198,6 +198,31 @@ func selectionSort(array: inout [Int]) {
     }
 }
 ```
+### PHP Implementation
+```PHP
+function selectionSort($data)
+{
+    $n=count($data);
+    $minIndex=null;     //the index of next min value or max value
+    $temp=null;
+ 
+    for($i=0; $i<$n-1; $i++)
+    {
+ 
+        $minIndex=$i;
+        for($j=$i+1; $j<$n; $j++)
+            if( $data[$j]<$data[$minIndex] ) //change the < to > for descending order
+                $minIndex=$j; 
+ 
+        //swap the current index of the outer loop with the next min value
+        $temp=$data[$i];
+        $data[$i]=$data[$minIndex];
+        $data[$minIndex]=$temp;
+    }
+ 
+    return $data;
+}
+```
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n^2).
