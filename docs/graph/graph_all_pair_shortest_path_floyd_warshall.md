@@ -282,11 +282,11 @@ int main()
 
 ## Time Complexity
 
-The time complexity of Floyd-Warshall algorithm is O(|V|^3).
+The time complexity of Floyd-Warshall algorithm is O(V<sup>3</sup>).
 
 ## Space Complexity
 
-The space complexity is O(|V|^2).
+The space complexity is O(V<sup>2</sup>).
 
 ## Sources
     
