@@ -13,32 +13,75 @@ If k is an intermediate vertex of path p, then we decompose p into i-->path p1--
 
 ## Pseudocode
 ```
-ADJOINT_MATRIX: It is a square matrix which contains the edge weights of an arbitrary edge (i,j) which have weight w, at the ith row and jth column of the matrix.
-n             : It is the length of the rows and columns of ADJOINT_MATRIX
-dist[n][n]    : It is the matrix, which initially copies all the elements from ADJOINT_MATRIX and then the Floyd-Warshall algorithm works on it and computes the all pairs shortest paths, it computes the shortest path for an arbitrary vertex i to j and saves the result in the ith row and jth column of dist[n][n] matrix.
-path[n][n]    : It is the martrix which initially takes value of the source vertex, at ith row and jth column which is i, for the edges which have different source and destination, as going from one vertex to itself means going no where. If there is no edge from i to j then the entry in the ith row and jth column will be -1. The path matrix is updated in the Floyd-Warshall algorithm and records the parents of one vertex in the simple path formed when we have considered an arbitrary vertex i as source.
-
-    FLOYD-WARSHALL(ADJOINT_MATRIX)
-        dist[n][n]
-        path[n][n]
-        for i=1 to n
-            for j=1 to n
-                dist[i][j]=ADJOINT_MATRIX[i][j]
-                if(i==j)
-                    path[i][j]=0;
-                elseif dist[i][j]!=INFINITE
-                    path[i][j]=i;
-                else
-                    path[i][j]=-1;
-        for k=1 to n
-            for i=1 to n
-                for j=1 to n
-                    if((dist[i][j] > (dist[i][k]+dist[k][j])) && (dist[i][k]!=INFINITE && dist[k][j]!=INFINITE))
-                        dist[i][j]=dist[i][k]+dist[k][j]
-                        path[i][j]=path[k][j]
-
+procedure floyd_warshall
+   n = no of vertices
+   A = matrix of dimension n*n
+   
+    for k = 1 to n
+       for i = 1 to n
+           for j = 1 to n
+                Ak[i, j] = min (Ak-1[i, j], Ak-1[i, k] + Ak-1[k, j])
+    return A    
+end procedure
 ```
+
 ## Code
+
+## C Implementation
+```C
+// defining the number of vertices
+void printMatrix(int matrix[20][20],int n);
+
+// Implementing floyd warshall algorithm
+void floydWarshall(int cost[20][20],int n) {
+  int matrix[20][20], i, j, k;
+
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      matrix[i][j] = cost[i][j];
+
+  // Adding vertices individually
+  for (k = 0; k < n; k++) {
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n; j++) {
+        if (matrix[i][k] + matrix[k][j] < matrix[i][j])
+          matrix[i][j] = matrix[i][k] + matrix[k][j];
+      }
+    }
+  }
+  printMatrix(matrix,n);
+}
+
+// Function to print the output matrix
+void printMatrix(int matrix[20][20],int n) {
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      if (matrix[i][j] == 999)
+        printf("%4s", "INF");
+      else
+        printf("%4d", matrix[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+// Main function
+int main() 
+{
+  int cost[20][20],i,j,n;
+  printf("enter the number of vertices");
+  scanf("%d",&n);
+  printf("enter the matrix\n");
+  for(i=0;i<n;i++)
+   {
+    for(j=0;j<n;j++)
+      {
+      scanf("%d",&cost[i][j]);
+      }
+   }
+  floydWarshall(cost,n);
+}
+```
 
 ### C++ Implementation
 
@@ -248,3 +291,5 @@ The space complexity is O(|V|^2).
 ## Sources
     
 - [Book-Introduction to Algorithms by CLRS](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
+- [Floyd-Warshall - Wikipedia](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
+- [Floyd-Warshall - geekforgeeks](https://www.geeksforgeeks.org/floyd-warshall-algorithm-dp-16/)
