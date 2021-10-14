@@ -348,7 +348,8 @@ void quickSort(int a[], int start, int end)
 ```
 
 ### PHP Implementation
-```
+
+```php
 function partition(&$array, $left, $right) {
         $pivotIndex = floor($left + ($right - $left) / 2);
         $pivotValue = $array[$pivotIndex];
