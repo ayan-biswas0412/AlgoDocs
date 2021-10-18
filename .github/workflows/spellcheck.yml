@@ -1,10 +1,12 @@
-# Add to: .github/workflows/spellcheck.yml
 name: Typo CI
 
 on:
   push:
-    branches-ignore:
-      - master
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   spellcheck:
     name: Typo CI (GitHub Action)

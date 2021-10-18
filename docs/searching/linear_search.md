@@ -63,6 +63,42 @@ def linear_search(array, target):
             return index 
 ```
 
+## Java Implementation
+
+```java
+    public int linear_search(int array[], int size, int key){
+        for(int i=0; i<size; i++)
+            if(array[i]==key)
+                return i;
+        return -1;
+    }
+```
+
+## Javascript Implementation
+
+```javascript
+ function linear_search(array, key) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === key) 
+    {
+      return i;
+    }
+  }
+  return -1;
+}
+```
+## Golang Implementation
+
+```golang
+ func linearsearch(datalist []int, key int) bool {
+	for _, item := range datalist {
+		if item == key {
+			return true
+		}
+	}
+	return false
+} 
+```
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n).
