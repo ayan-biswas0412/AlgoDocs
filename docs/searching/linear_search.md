@@ -99,6 +99,16 @@ def linear_search(array, target):
 	return false
 } 
 ```
+
+## PHP Implementation
+``` PHP
+function linearSearch($arr, $x) {
+        for($i = 0; $i < sizeof($arr); $i++)
+            if($arr[$i] == $x) return $i;
+        return -1;
+}
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n).
