@@ -143,6 +143,30 @@ let bubbleSort = (array) => {
 }
 ```
 
+### Swift Implementation
+
+```swift
+func bubbleSort(array: inout [Int]) {
+    var n = array.count
+    while (n > 0) {
+        var lastModifiedIndex = 0
+        for currentIndex in 1..<n {
+            if array[currentIndex - 1] > array[currentIndex] {
+                let temp = array[currentIndex - 1]
+                array[currentIndex - 1] = array[currentIndex]
+                array[currentIndex] = temp
+                lastModifiedIndex = currentIndex
+            }
+        }
+        n = lastModifiedIndex
+    }
+}
+
+var array = [12, 11, 15, 10, 9, 1, 2, 3, 13, 14, 4, 5, 6, 7, 8]
+bubbleSort(array: &array)
+print(array)
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n^2).
