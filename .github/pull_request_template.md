@@ -2,7 +2,7 @@ Fixes #
 
 ### Tasks
  - [ ] Add your changes
- - [ ] ...
+ - [ ] Add second change
 
 ### Please check that your PR satisfies these
 
