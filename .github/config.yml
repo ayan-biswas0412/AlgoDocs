@@ -1,0 +1,23 @@
+# Configuration for welcome - https://github.com/behaviorbot/welcome
+
+# Configuration for new-issue-welcome - https://github.com/behaviorbot/new-issue-welcome
+
+# Comment to be posted to on first time issues
+newIssueWelcomeComment: >
+  Thanks for opening your first issue here! Be sure to follow the issue template!
+  If you are first time visiting this repo please have a read of the [README.md](https://github.com/ayan-biswas0412/AlgoDocs#readme).
+  Please be patient I will get back to you soon and till then you can find different issues listed [here](https://github.com/ayan-biswas0412/AlgoDocs/issues).
+# Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
+
+# Comment to be posted to on PRs from first time contributors in your repository
+newPRWelcomeComment: >
+  🧑‍💻👩‍💻 Thanks for opening this pull request! Please check out the contributing guidelines.🥳🥳
+  Please be patient I will get back to you soon and till then you can find different issues listed [here](https://github.com/ayan-biswas0412/AlgoDocs/issues)
+
+# Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
+
+# Comment to be posted to on pull requests merged by a first time user
+firstPRMergeComment: >
+  🥳🥳Congrats on merging your first pull request! AlgoDocs will be proud of you!🎉🎉🎉
+
+# It is recommended to include as many gifs and emojis as possible!
