@@ -381,6 +381,40 @@ function quicksort(&$array, $left, $right) {
 }
 ```
 
+### Swift Implementation
+
+```swift
+func quickSort(array: inout [Int], startIndex: Int, endIndex: Int)
+{
+    if (startIndex < endIndex)
+    {
+        pivotIndex: Int = partition(array, startIndex, endIndex);
+        quickSort(array, startIndex, pivotIndex);
+        quickSort(array, pivotIndex + 1, endIndex);
+    }
+}
+
+func partition(array: inout [Int], startIndex: Int, endIndex: Int) -> Integer
+{
+    pivotIndex: Int = (startIndex + endIndex) / 2;
+    pivotValue: Int = array[pivotIndex];
+    startIndex-=1;
+    endIndex+=1;
+
+    while (true)
+    {
+
+        do startIndex+=1; while (array[startIndex] < pivotValue);
+        do endIndex-=1; while (array[endIndex] > pivotValue);
+
+        if (startIndex >= endIndex) return endIndex;
+
+        int temp = array[startIndex];
+        array[startIndex] = array[endIndex];
+        array[endIndex] = temp;
+    }
+}
+```
 
 ## Time Complexity
 
