@@ -163,6 +163,20 @@ func bubbleSort(array: inout [Int]) {
 }
 ```
 
+### PHP Implementation
+```PHP
+function bubbleSort(&$Array, $n) {
+  $temp;
+  for($i=0; $i<$n; $i++)
+    for($j=0; $j<$n-$i-1; $j++)
+      if($Array[$j]>$Array[$j+1]) {
+        $temp = $Array[$j];
+        $Array[$j] = $Array[$j+1];
+        $Array[$j+1] = $temp;
+      }
+}
+```
+
 ## Time Complexity
 
 The time complexity of the above algorithm is O(n^2).
