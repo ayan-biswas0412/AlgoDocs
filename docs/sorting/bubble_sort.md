@@ -61,6 +61,8 @@ void bubbleSort(int arr[], int n)
    }
 }
 ```
+ Dijkstra’s_Algorithm
+ 
 ### C Implementation
 
 ```C
@@ -104,6 +106,7 @@ void bubbleSort(int arr[], int n)
         }
     }
 ```    
+
 
 ### Python Implementation
 
